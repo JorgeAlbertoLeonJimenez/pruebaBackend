@@ -57,7 +57,7 @@ app.use('/api', employessRoutes);
 
 const key = "re_Hjk8hz6w_CNyUeGJqVYdfxy23uWE4bcD5"
 const resend = new Resend(key);
-app.get("/api/email", async (req, res) => {
+app.get("/", async (req, res) => {
   const { data, error } = await resend.emails.send({
     from: "Acme <onboarding@resend.dev>",
     to: ["jorgealbertolejim@gmail.com"],
